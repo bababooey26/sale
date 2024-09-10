@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baba-booey Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Baba-booey Shop</h1>
+        <button id="contactButton">تواصل معنا</button>
+    </header>
+    
+    <main>
+        <section id="products">
+            <div class="product" data-product="Netflix" data-price="400">
+                <img src="netflix.png" alt="Netflix">
+                <h2>Netflix</h2>
+                <select class="duration-select">
+                    <option value="1">1 شهر</option>
+                    <option value="2">2 شهرين</option>
+                    <option value="3">3 أشهر</option>
+                </select>
+                <button class="addToCartButton">أضف إلى السلة</button>
+            </div>
+            <div class="product" data-product="Spotify" data-price="350">
+                <img src="spotify.png" alt="Spotify">
+                <h2>Spotify</h2>
+                <select class="duration-select">
+                    <option value="1">1 شهر</option>
+                    <option value="2">2 شهرين</option>
+                    <option value="3">3 أشهر</option>
+                </select>
+                <button class="addToCartButton">أضف إلى السلة</button>
+            </div>
+            <div class="product" data-product="Xbox Game Pass" data-price="600">
+                <img src="xbox.png" alt="Xbox Game Pass">
+                <h2>Xbox Game Pass</h2>
+                <select class="duration-select">
+                    <option value="1">1 شهر</option>
+                    <option value="2">2 شهرين</option>
+                    <option value="3">3 أشهر</option>
+                </select>
+                <button class="addToCartButton">أضف إلى السلة</button>
+            </div>
+        </section>
+
+        <!-- سلة المشتريات -->
+        <div id="cart" class="hidden">
+            <div class="cart-container">
+                <h2>تفاصيل الشراء</h2>
+                <p id="totalPrice">سعر إجمالي: 0 دج</p>
+                <form id="orderForm">
+                    <label for="name">الاسم:</label>
+                    <input type="text" id="name" name="name" placeholder="أدخل اسمك" required>
+                    <label for="phone">رقم الهاتف:</label>
+                    <input type="text" id="phone" name="phone" placeholder="أدخل رقم هاتفك" required>
+                    <input type="submit" value="شراء">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- زر الانتقال إلى السلة -->
+    <button id="goToCartButton" class="hidden">سلة</button>
+    
+    <!-- نافذة التواصل -->
+    <div id="contactModal" class="hidden">
+        <h2>تواصل معنا</h2>
+        <p>يمكنك الاتصال بنا على الرقم: +213798913454</p>
+        <button id="closeContactModal">إغلاق</button>
+    </div>
+</body>
+</html>
